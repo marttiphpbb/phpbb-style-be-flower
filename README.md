@@ -2,7 +2,7 @@
 
 [Topic on phpbb.com](https://www.phpbb.com/community/viewtopic.php?f=691&t=2548861)
 
-phpBB 3.3+ Style pased on prosilver with several color variations.
+phpBB 3.3+ Style based on prosilver with several color variations.
 
 ## Be Flower Red
 
