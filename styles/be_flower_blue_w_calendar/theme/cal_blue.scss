@@ -30,18 +30,18 @@ $shadow: rgba(0, 0, 0, 0.25);
 
 // The primary UI Color and an accent version, This is usually the color of your
 // links
-$primary: hsl(105,67%,26%) !default;
+$primary: hsl(231,66%, 35%) !default;
 $primary-on: $white !default;
 
 // The secondary UI Color and an accent version, This is usually the color of
 // your UI elements like buttons/toggles/checks/etc
-$secondary: hsl(112,73%,22%) !default;
+$secondary: hsl(241, 66%, 35%) !default;
 $secondary-on: $white !default;
 $secondary-alt: hsl(0,0%,10%) !default;
 
 // The surfahsl(105,67%,1%) accent version, This is the primary color of any
 // components background that is within a container with another background
-$surface: hsl(0,2%,80%) !default;
+$surface: hsl(191,100%,92%) !default;
 $surface-on: hsl(240,1%,26%) !default;
 $surface-alt: hsl(0,8%,85%) !default;
 $surface-alt-on: hsl(219, 20%, 20%) !default;
@@ -83,7 +83,7 @@ $info-on: $white !default;
 $info-light-on: hsl(219, 20%, 20%) !default;
 
 //== The following section of vars are based on the first. Its generating the
-//== dark and light variations of each do not edit them unless you are
+//== dark and light variations of each do not edit them unless you are 
 //== extremely familiar with the tool, scss, and working with color
 
 // PRIMARY COLORS
@@ -163,6 +163,25 @@ $poll-border2: desaturate(darken($poll-bg2, 10%), 5%);
 $poll-border3: desaturate(darken($poll-bg2, 5%), 5%);
 $poll-border4: desaturate(darken($poll-bg4, 5%), 5%);
 $poll-border5: desaturate(darken($poll-bg5, 5%), 5%);
+
+/*
+---------------------------------------------------------------
+Calendar colors
+---------------------------------------------------------------
+*/
+
+$calendar-primary: desaturate($primary, 30%);
+$calendar-secondary: desaturate($secondary, 40%);
+$calendar-odd: lighten($calendar-primary, 55%);
+$calendar-even: lighten($calendar-primary, 65%);
+$calendar-odd-light: lighten($calendar-odd, 2.5%);
+$calendar-odd-dark: darken($calendar-odd, 2.5%);
+$calendar-even-light: lighten($calendar-even, 2.5%);
+$calendar-even-dark: darken($calendar-even, 2.5%);
+$calendar-topic-odd: lighten($calendar-secondary, 55%);
+$calendar-topic-even: lighten($calendar-secondary, 60%);
+$calendar-hilit: $primary-on;
+
 /*
 ---------------------------------------------------------------------------------
  Made with Color Scheme Generator 2.0 - Thanks to @Hanakin
@@ -1469,4 +1488,697 @@ $be_unread: #CCCCCC;
   &:after{
     content: $be_move_b;
   }
+}
+
+/** 
+---------------------------------------------------------------
+Calendar table viee 
+---------------------------------------------------------------
+**/
+
+div.calendartableview {
+	width: 100%;
+}
+div.calendartableview div.calendar-navigation{
+	position: relative;
+}
+div.calendartableview div.calendar-navigation table {
+	width: 100%;
+	border-collapse: separate;
+	text-align: center;
+	font-weight: bold;
+	table-layout: fixed;
+	cursor: pointer;
+}
+div.calendartableview div.calendar-navigation table.calendar-navigation-overlay{
+	position: absolute;
+}
+table.calendar-navigation-overlay td {
+	border: 1px solid transparent;
+	width: 100%;
+	height: 100%;
+}
+table.calendar-navigation-overlay td a {
+	width: 100%;
+	height: 100%;
+}
+table.calendar-navigation-overlay td.select {
+	background-color: rgba($primary, .1);
+	border-top-color: $primary-dark;
+	border-bottom-color: $primary-dark;
+}
+table.calendar-navigation-overlay td.select-left {
+	border-left-color: $primary-dark;
+}
+table.calendar-navigation-overlay td.select-right {
+	border-right-color: $primary-dark;
+}
+div.calendartableview div.tables table {
+	width: 100%;
+	table-layout: fixed;
+	border: 1px dotted rgba($primary-light, .5);
+	text-align: center;
+}
+
+div.calendartableview table colgroup.month-even,
+div.calendartableview table tr.month .month-even {
+	background: $calendar-even-light;
+}
+
+div.calendartableview table colgroup.month-even col.sat,
+div.calendartableview table colgroup.month-even col.sun {
+	background: $calendar-even-dark;
+}
+
+div.calendartableview table colgroup.month-odd,
+div.calendartableview table tr.month .month-odd {
+	background: $calendar-odd-light;
+}
+
+div.calendartableview table colgroup.month-odd col.sat,
+div.calendartableview table colgroup.month-odd col.sun {
+	background: $calendar-odd-dark;
+}
+
+.isoweek span{
+	border: 2px solid $primary-dark;
+	font-size: .7em;
+	background-color: $primary-dark;
+	color: $primary-on;
+}
+div.calendartableview td,
+div.calendartableview th {
+	height: 1.7em;
+}
+div.calendartableview td.topic {
+	background-color: $calendar-topic-even;
+	border: 1px solid $primary-light;
+}
+div.calendartableview tr:nth-child(odd) td.topic {
+	background-color: $calendar-topic-odd;
+}
+div.calendartableview tr td.topic.hover {
+	background-color: $calendar-hilit;
+}
+div.calendartableview tr td.topic-hilit {
+	border: 2px solid $primary-dark;
+}
+div.calendartableview tr td a {
+	width: 100%;
+}
+div.calendartableview tr td.topic a {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+div.calendartableview col.today {
+	border: 1px solid $primary-dark;
+}
+div.calendartableview th,
+div.calendartableview td {
+	color: $primary-dark;
+}
+
+/**
+-------------------------------------------------
+Calendar Inline View 
+--------------------------------------------------
+**/
+
+div.marttiphpbb-calendarinlineview
+{
+	position: relative;
+	width: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.weekdays
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:flex;
+	width: 100%;
+	height: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.day
+{
+	flex: 1;
+	margin: .15em;
+	border-radius: .6em;
+	background: $calendar-odd-light;
+	color: $calendar-primary;
+	display: flex;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info
+{
+	padding: .4em .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info-bottom
+{
+	align-self: flex-end;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info.small
+{
+	padding: .2em .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.monthday
+{
+	float: left;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.monthday
+{
+	font-size: 1.1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.monthday
+{
+	font-size: 1.3em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.weekday
+{
+	float: left;
+	padding: .1em .2em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.weekday
+{
+	font-size: .8em;
+}
+div.marttiphpbb-calendarinlineview div.day-info-large div.weekday
+{
+	font-size: 1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon
+{
+	float: right;
+	padding: .1em .2em;
+	margin: -.5em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.moon
+{
+	font-size: .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.moon
+{
+	font-size: 1.1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon span
+{
+	z-index: 1;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.isoweek
+{
+	font-style: italic;
+	float: right;
+	clear: right;
+	padding: .1em .2em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.isoweek
+{
+	font-size: 0.7em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.isoweek
+{
+	font-size: .9em;
+}
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px)
+{
+	div.marttiphpbb-calendarinlineview div.moon > span,
+	div.marttiphpbb-calendarinlineview div.isoweek,
+	div.marttiphpbb-calendarinlineview div.weekday
+	{
+		display: none;
+	}
+}
+
+div.marttiphpbb-calendarinlineview div.day.even-month
+{
+	background: $calendar-even-light;
+}
+
+div.marttiphpbb-calendarinlineview div.day.sat,
+div.marttiphpbb-calendarinlineview div.day.sun
+{
+	background: $calendar-odd-dark;
+}
+div.marttiphpbb-calendarinlineview div.day.even-month.sat,
+div.marttiphpbb-calendarinlineview div.day.even-month.sun
+{
+	background-color: $calendar-even-dark;
+}
+
+div.marttiphpbb-calendarinlineview div.eventrows
+{
+	display: flex;
+	flex-direction: column;
+	margin: .3em 0;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-info-large
+{
+	height: 2.2em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-info-small
+{
+	height: 1.9em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-fill
+{
+	height: .7em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow
+{
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+	height: 2.3em;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con
+{
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev
+{
+	margin: .15em;
+	background: $calendar-topic-odd;
+	border: 1px solid $calendar-secondary;
+	border-left-style: dashed;
+	border-right-style: dashed;
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow:nth-child(even) div.f-con div.ev
+{
+	background: $calendar-topic-even;
+}
+
+div.marttiphpbb-calendarinlineview div.ev.ev-start div.ev-overlay
+{
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+}
+
+div.marttiphpbb-calendarinlineview div.ev.ev-end div.ev-overlay
+{
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+}
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay
+{
+	width: 100%;
+	height: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay:hover,
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay.hover
+{
+	background: rgba($primary-on, 0.5);
+}
+
+div.marttiphpbb-calendarinlineview div.ev a
+{
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	padding-left: .3em;
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-start
+{
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+	border-left-style: solid;
+}
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-end
+{
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+	border-right-style: solid;
+}
+
+div.marttiphpbb-calendarinlineview div.flex-1
+{
+	flex: 1;
+}
+div.marttiphpbb-calendarinlineview div.flex-2
+{
+	flex: 2;
+}
+div.marttiphpbb-calendarinlineview div.flex-3
+{
+	flex: 3;
+}
+div.marttiphpbb-calendarinlineview div.flex-4
+{
+	flex: 4;
+}
+div.marttiphpbb-calendarinlineview div.flex-5
+{
+	flex: 5;
+}
+div.marttiphpbb-calendarinlineview div.flex-6
+{
+	flex: 6;
+}
+div.marttiphpbb-calendarinlineview div.flex-7
+{
+	flex: 7;
+}
+div.marttiphpbb-calendarinlineview div.flex-8
+{
+	flex: 8;
+}
+div.marttiphpbb-calendarinlineview div.flex-9
+{
+	flex: 9;
+}
+div.marttiphpbb-calendarinlineview div.flex-10
+{
+	flex: 10;
+}
+div.marttiphpbb-calendarinlineview div.flex-11
+{
+	flex: 11;
+}
+div.marttiphpbb-calendarinlineview div.flex-12
+{
+	flex: 12;
+}
+div.marttiphpbb-calendarinlineview div.flex-13
+{
+	flex: 13;
+}
+div.marttiphpbb-calendarinlineview div.flex-14
+{
+	flex: 14;
+}
+div.marttiphpbb-calendarinlineview div.flex-15
+{
+	flex: 15;
+}
+div.marttiphpbb-calendarinlineview div.flex-16
+{
+	flex: 16;
+}
+div.marttiphpbb-calendarinlineview div.monthrow
+{
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+	height: 1.8em;
+	margin: .3em 0;
+}
+div.marttiphpbb-calendarinlineview div.month
+{
+	height: 100%;
+	line-height: 1.8em;
+	text-align: center;
+	border-radius: .6em;
+	background: $calendar-odd-light;
+	/* color: #444; */
+	margin: 0 .15em;
+}
+div.marttiphpbb-calendarinlineview div.month.even-month
+{
+	/* color: rgb(12, 56, 133); */
+	background: $calendar-even-light;
+}
+div.marttiphpbb-calendarinlineview div.month span
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/**
+---------------------------------------------------------
+Calendar Month View
+---------------------------------------------------------
+**/
+
+/*
+$calendar-primary: desaturate($primary, 50%);
+$calendar-secondary: desaturate($secondary, 65%);
+$calendar-odd: lighten($calendar-primary, 55%);
+$calendar-even: lighten($calendar-primary, 65%);
+$calendar-odd-light: lighten($calendar-odd, 2.5%);
+$calendar-odd-dark: darken($calendar-odd, 2.5%);
+$calendar-even-light: lighten($calendar-even, 2.5%);
+$calendar-even-dark: darken($calendar-even, 2.5%);
+$calendar-topic-odd: lighten($calendar-secondary, 68%);
+$calendar-topic-even: lighten($calendar-secondary, 72%);
+$calendar-hilit: $primary-on;
+*/
+
+div.month
+{
+  color: $calendar-primary;
+  width: 100%;
+}
+
+div.month div.week-container
+{
+	position: relative;
+	width: 100%;
+}
+
+div.month div.weekdays
+{
+	position:absolute;
+	display:flex;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+div.month div.weekdays div.day
+{
+	flex: 1;
+	background: $calendar-even-light;
+	margin: .15em;
+	border-radius: .5em;
+}
+
+div.month div.weekdays div.day.this-month
+{
+	background: $calendar-odd-light;
+}
+
+div.month div.weekdays div.day.today.this-month
+{
+	border: 2px solid $calendar-primary;
+}
+
+div.month div.weekdays div.day div.dayhead
+{
+  color: $calendar-primary;
+  padding: .4em .8em;
+}
+
+div.month div.weekdays div.day div.dayhead div.monthday
+{
+	font-size: 1.8em;
+	float: left;
+}
+
+div.month div.weekdays div.day div.dayhead div.weekday
+{
+	font-size: 1.2em;
+	float: left;
+	padding: .1em .2em;
+}
+
+div.month div.weekdays div.day div.dayhead div.moon
+{
+	font-size: 1.2em;
+	float: right;
+	padding: .1em .2em;
+	margin: -.5em;
+}
+
+div.month div.weekdays div.day div.dayhead div.moon span
+{
+	z-index: 1;
+}
+
+div.month div.weekdays div.day div.dayhead div.isoweek
+{
+	font-style: italic;
+	font-size: 0.9em;
+	float: right;
+	clear: right;
+	padding: .1em .2em;
+}
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px)
+{
+	div.moon > span, div.isoweek, div.weekdays div.day div.weekday
+	{
+		display: none;
+	}
+}
+
+div.month div.weekdays div.day
+{
+	color: $calendar-even-light;
+}
+
+div.month div.weekdays div.day.sat,
+div.month div.weekdays div.day.sun
+{
+	background-color: $calendar-even-dark;
+}
+div.month div.weekdays div.day.this-month.sat,
+div.month div.weekdays div.day.this-month.sun
+{
+	background-color: $calendar-odd-dark;
+}
+
+div.month div.eventrows
+{
+	display:flex;
+	flex-direction: column;
+}
+
+div.month div.eventrows div.evrow-head
+{
+	height: 2.5em;
+}
+div.month div.eventrows div.evrow-foot
+{
+	height: .7em;
+}
+div.month div.eventrows div.evrow
+{
+	height: 2em;
+	padding: .15em 0;
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+}
+
+div.month div.eventrows div.evrow div.f-con
+{
+	min-width: 0;
+}
+
+div.month div.eventrows div.evrow div.f-con div.ev
+{
+	margin: .15em;
+	background: $calendar-topic-odd;
+	border: 1px solid $calendar-secondary;
+	border-left-style: dashed;
+	border-right-style: dashed;
+	min-width: 0;
+}
+
+div.month div.eventrows div.evrow:nth-child(even) div.f-con div.ev{
+	background: $calendar-topic-even;
+}
+div.month div.eventrows div.evrow div.ev.ev-start div.ev-overlay{
+	border-top-left-radius: .7em;
+	border-bottom-left-radius: .7em;
+}
+div.month div.eventrows div.evrow div.ev.ev-end div.ev-overlay{
+	border-top-right-radius: .7em;
+	border-bottom-right-radius: .7em;
+}
+div.month div.eventrows div.evrow div.ev div.ev-overlay{
+	width: 100%;
+	height: 100%;
+}
+div.month div.eventrows div.evrow div.ev div.ev-overlay:hover,
+div.month div.eventrows div.evrow div.ev div.ev-overlay.hover
+{
+	background: rgba($calendar-hilit, 0.9);
+}
+
+div.month div.eventrows div.evrow div.ev a
+{
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	padding-left: .3em;
+	min-width: 0;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.ev-start
+{
+	border-top-left-radius: .7em;
+	border-bottom-left-radius: .7em;
+	border-left-style: solid;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.ev-end
+{
+	border-top-right-radius: .7em;
+	border-bottom-right-radius: .7em;
+	border-right-style: solid;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.topic-hilit
+{
+	border-width: 2px;
+	border-color: $calendar-primary;
+}
+
+div.month div.eventrows div.evrow div.flex-1
+{
+	flex: 1;
+}
+div.month div.eventrows div.evrow div.flex-2
+{
+	flex: 2;
+}
+div.month div.eventrows div.evrow div.flex-3
+{
+	flex: 3;
+}
+div.month div.eventrows div.evrow div.flex-4
+{
+	flex: 4;
+}
+div.month div.eventrows div.evrow div.flex-5
+{
+	flex: 5;
+}
+div.month div.eventrows div.evrow div.flex-6
+{
+	flex: 6;
+}
+div.month div.eventrows div.evrow div.flex-7
+{
+	flex: 7;
 }

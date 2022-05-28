@@ -16,6 +16,11 @@
   font-weight: normal;
   font-style: normal; }
 /*
+ ---------------------------------------------------------------
+ Calendar colors
+ ---------------------------------------------------------------
+ */
+/*
  ---------------------------------------------------------------------------------
  Made with Color Scheme Generator 2.0 - Thanks to @Hanakin
  ---------------------------------------------------------------------------------
@@ -61,7 +66,7 @@ fieldset.polls dd div {
   border-right-color: transparent; }
 
 fieldset.polls dl {
-  border-top-color: #dad8d8;
+  border-top-color: #f0fcff;
   color: black; }
 
 .pollbar1 {
@@ -115,27 +120,27 @@ fieldset.polls dl {
  ----------------------------------------
  */
 a {
-  color: #020901; }
+  color: #0e0d3f; }
   a:hover {
-    color: #1a610f; }
+    color: #201e94; }
 
 /* post body links */
 .postlink {
-  border-bottom-color: #3d991e;
-  color: #3d991e; }
+  border-bottom-color: #273ebe;
+  color: #273ebe; }
   .postlink:hover, .postlink:visited {
-    background-color: #6ae557;
-    border-bottom-color: #2c6f16;
-    color: #2c6f16; }
+    background-color: #9795e9;
+    border-bottom-color: #1e3094;
+    color: #1e3094; }
   .postlink:visited {
-    background-color: #cdcbcb; }
+    background-color: #d6f8ff; }
 
 .signature a, .signature a:hover {
   background-color: transparent; }
 
 /* arrow links  */
 .arrow-left:hover, .arrow-right:hover {
-  color: #020901; }
+  color: #0e0d3f; }
 
 .posthilit {
   background-color: #f9d3d2;
@@ -159,17 +164,17 @@ a {
   .button .icon, .button-secondary a.button1 .icon, input.button1 .icon, input.button3 .icon, a.button2 .icon, input.button2 .icon, .button-secondary .icon {
     color: #1a1a1a; }
   .button:hover, .button-secondary a.button1:hover, input.button1:hover, input.button3:hover, a.button2:hover, input.button2:hover, .button-secondary:hover, .button:focus, .button-secondary a.button1:focus, input.button1:focus, input.button3:focus, a.button2:focus, input.button2:focus, .button-secondary:focus, .button:focus .icon, .button-secondary a.button1:focus .icon, input.button1:focus .icon, input.button3:focus .icon, a.button2:focus .icon, input.button2:focus .icon, .button-secondary:focus .icon, .button:hover .icon, .button-secondary a.button1:hover .icon, input.button1:hover .icon, input.button3:hover .icon, a.button2:hover .icon, input.button2:hover .icon, .button-secondary:hover .icon {
-    background: #1a610f;
-    border-color: #1a610f;
+    background: #201e94;
+    border-color: #201e94;
     color: #ffffff; }
   .button:focus .caret, .button-secondary a.button1:focus .caret, input.button1:focus .caret, input.button3:focus .caret, a.button2:focus .caret, input.button2:focus .caret, .button-secondary:focus .caret, .button:hover .caret, .button-secondary a.button1:hover .caret, input.button1:hover .caret, input.button3:hover .caret, a.button2:hover .caret, input.button2:hover .caret, .button-secondary:hover .caret {
     border-color: #ffffff; }
 
 .button-form, input.button-form {
-  color: #1a610f; }
+  color: #201e94; }
 
 .button-search:hover, .button-search-end:hover {
-  border-color: #1a610f; }
+  border-color: #201e94; }
 
 .contact-icons a:hover {
   background-color: #fcfcfc; }
@@ -180,14 +185,14 @@ a {
  ----------------------------------------
  */
 .tabs .tab > a {
-  background: #cdcbcb;
+  background: #d6f8ff;
   color: #424243; }
   .tabs .tab > a:hover {
-    background: #dad8d8;
-    color: #1a610f; }
+    background: #f0fcff;
+    color: #201e94; }
 .tabs .activetab > a, .tabs .activetab > a:hover {
-  background: #dad8d8;
-  color: #1a610f; }
+  background: #f0fcff;
+  color: #201e94; }
 
 /*
  ----------------------------------------
@@ -197,7 +202,7 @@ a {
 .responsive-tab .responsive-tab-link:before {
   border-color: #424243; }
 .responsive-tab .responsive-tab-link:hover:before {
-  border-color: #1a610f; }
+  border-color: #201e94; }
 
 /*
  ----------------------------------------
@@ -205,14 +210,14 @@ a {
  ----------------------------------------
  */
 .minitabs a {
-  background: #cdcbcb;
+  background: #d6f8ff;
   color: #424243; }
   .minitabs a:hover {
     background: #f1f1f1;
-    color: #1a610f; }
+    color: #201e94; }
 .minitabs .activetab a {
   background: #f1f1f1;
-  color: #1a610f; }
+  color: #201e94; }
 
 /*
  ----------------------------------------
@@ -220,14 +225,14 @@ a {
  ----------------------------------------
  */
 .navigation a {
-  background: #cdcbcb;
+  background: #d6f8ff;
   color: #424243; }
   .navigation a:hover {
     background: #f1f1f1;
-    color: #1a610f; }
+    color: #201e94; }
 .navigation .active-subsection a {
   background: #f1f1f1;
-  color: #1a610f; }
+  color: #201e94; }
 
 /*
  ----------------------------------------
@@ -238,8 +243,8 @@ a {
   background: transparent;
   color: #29303d; }
 .pagination li.active span, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger {
-  background: #1a610f;
-  border-color: #1a610f;
+  background: #201e94;
+  border-color: #201e94;
   color: #ffffff; }
 
 /*
@@ -296,12 +301,12 @@ li.notification-reported strong, li.notification-disapproved strong {
 .jumpbox .dropdown .pointer-inner {
   border-color: #dcd6d6 transparent; }
 .jumpbox-cat-link {
-  background-color: #1b440d;
-  border-top-color: #1b440d;
+  background-color: #16226a;
+  border-top-color: #16226a;
   color: #ffffff; }
   .jumpbox-cat-link:hover, .jumpbox-cat-link:focus {
-    background-color: #2c6f16;
-    border-top-color: #2c6f16;
+    background-color: #1e3094;
+    border-top-color: #1e3094;
     color: #ffffff; }
 .jumpbox-forum-link, .jumpbox-sub-link {
   background-color: #dcd6d6; }
@@ -392,7 +397,7 @@ fieldset dl:hover dt label, fieldset.fields2 dl:hover dt label {
   .inputbox:-moz-placeholder, .inputbox::-webkit-input-placeholder {
     color: #29303d; }
   .inputbox:hover, .inputbox:focus {
-    border-color: #2c6f16; }
+    border-color: #1e3094; }
   .inputbox:focus:-moz-placeholder, .inputbox:focus::-webkit-input-placeholder {
     /* factor this out */
     color: transparent; }
@@ -410,7 +415,7 @@ input.disabled {
   .message-box textarea.drag-n-drop {
     outline-color: black; }
   .message-box textarea.drag-n-drop-highlight {
-    outline-color: rgba(44, 111, 22, 0.5); }
+    outline-color: rgba(30, 48, 148, 0.5); }
 
 /*
  ################################################################################
@@ -423,7 +428,7 @@ input.disabled {
  ----------------------------------------
  */
 .headerbar {
-  background-color: #1b440d;
+  background-color: #16226a;
   color: #ffffff; }
   .headerbar h1, .headerbar a, .headerbar a:hover {
     color: #ffffff; }
@@ -434,7 +439,7 @@ input.disabled {
  ----------------------------------------
  */
 .search-header {
-  box-shadow: 0 0 10px #1b440d;
+  box-shadow: 0 0 10px #16226a;
   /* factor out everything but color? */ }
 
 /*
@@ -443,7 +448,7 @@ input.disabled {
  ----------------------------------------
  */
 .forumbg, .forabg {
-  background-color: #1b440d; }
+  background-color: #16226a; }
   .forumbg .header a, .forabg .header a {
     color: #ffffff; }
 
@@ -498,7 +503,7 @@ ul.cplist {
  ----------------------------------------
  */
 .navbar {
-  background-color: #dad8d8; }
+  background-color: #f0fcff; }
 
 /*
  ----------------------------------------
@@ -530,7 +535,7 @@ table.zebra-list tr:nth-child(even) td, ul.zebra-list li:nth-child(even) td, tab
  ----------------------------------------
  */
 .panel {
-  background-color: #dad8d8;
+  background-color: #f0fcff;
   color: #424243; }
   .panel-container .panel {
     background-color: #f1f1f1; }
@@ -583,7 +588,7 @@ dl.mini dt {
     background-color: #d4d4d4; }
 
 .bg3 {
-  background-color: #dad8d8; }
+  background-color: #f0fcff; }
 
 .bg1 {
   background-color: #e8e3e3; }
@@ -629,9 +634,9 @@ dl.file dd {
 /* Code block */
 .codebox {
   background-color: #f1f1f1;
-  border-color: #dad8d8; }
+  border-color: #f0fcff; }
   .codebox p {
-    border-bottom-color: #dad8d8; }
+    border-bottom-color: #f0fcff; }
   .codebox code {
     color: #3c8b42; }
 
@@ -647,9 +652,9 @@ blockquote {
 /* Attachbox block */
 .attachbox {
   background-color: #f1f1f1;
-  border-color: #c1bebe; }
+  border-color: #bdf3ff; }
   .attachbox dd {
-    border-top-color: #c1bebe; }
+    border-top-color: #bdf3ff; }
   .attachbox p {
     color: black; }
     .attachbox p.stats {
@@ -661,13 +666,13 @@ blockquote {
 /* Thumbnail block */
 dl.thumbnail img {
   background-color: #f1f1f1;
-  border-color: #c1bebe; }
+  border-color: #bdf3ff; }
 dl.thumbnail dd {
   color: black; }
 dl.thumbnail dt a:hover {
-  background-color: #c1bebe; }
+  background-color: #bdf3ff; }
   dl.thumbnail dt a:hover img {
-    border-color: #1a610f; }
+    border-color: #201e94; }
 
 /* Post Profile */
 .postprofile {
@@ -702,7 +707,7 @@ dd.profile-warnings {
  ----------------------------------------
  */
 .icon.icon-blue, a:hover .icon.icon-blue {
-  color: #1a610f; }
+  color: #201e94; }
 .icon.icon-green, a:hover .icon.icon-green {
   color: #5eba66; }
 .icon.icon-red, a:hover .icon.icon-red {
@@ -868,3 +873,518 @@ dd.profile-warnings {
   content: '\e820'; }
 .topic_moved:after {
   content: '\e821'; }
+
+/** 
+ ---------------------------------------------------------------
+ Calendar table viee 
+ ---------------------------------------------------------------
+ **/
+div.calendartableview {
+  width: 100%; }
+
+div.calendartableview div.calendar-navigation {
+  position: relative; }
+
+div.calendartableview div.calendar-navigation table {
+  width: 100%;
+  border-collapse: separate;
+  text-align: center;
+  font-weight: bold;
+  table-layout: fixed;
+  cursor: pointer; }
+
+div.calendartableview div.calendar-navigation table.calendar-navigation-overlay {
+  position: absolute; }
+
+table.calendar-navigation-overlay td {
+  border: 1px solid transparent;
+  width: 100%;
+  height: 100%; }
+
+table.calendar-navigation-overlay td a {
+  width: 100%;
+  height: 100%; }
+
+table.calendar-navigation-overlay td.select {
+  background-color: rgba(30, 48, 148, 0.1);
+  border-top-color: #16226a;
+  border-bottom-color: #16226a; }
+
+table.calendar-navigation-overlay td.select-left {
+  border-left-color: #16226a; }
+
+table.calendar-navigation-overlay td.select-right {
+  border-right-color: #16226a; }
+
+div.calendartableview div.tables table {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px dotted rgba(39, 62, 190, 0.5);
+  text-align: center; }
+
+div.calendartableview table colgroup.month-even, div.calendartableview table tr.month .month-even {
+  background: white; }
+
+div.calendartableview table colgroup.month-even col.sat, div.calendartableview table colgroup.month-even col.sun {
+  background: #f9f9f9; }
+
+div.calendartableview table colgroup.month-odd, div.calendartableview table tr.month .month-odd {
+  background: #e5e7f3; }
+
+div.calendartableview table colgroup.month-odd col.sat, div.calendartableview table colgroup.month-odd col.sun {
+  background: #d4d7eb; }
+
+.isoweek span {
+  border: 2px solid #16226a;
+  font-size: 0.7em;
+  background-color: #16226a;
+  color: #ffffff; }
+
+div.calendartableview td, div.calendartableview th {
+  height: 1.7em; }
+
+div.calendartableview td.topic {
+  background-color: #efeff6;
+  border: 1px solid #273ebe; }
+
+div.calendartableview tr:nth-child(odd) td.topic {
+  background-color: #dfdfec; }
+
+div.calendartableview tr td.topic.hover {
+  background-color: #ffffff; }
+
+div.calendartableview tr td.topic-hilit {
+  border: 2px solid #16226a; }
+
+div.calendartableview tr td a {
+  width: 100%; }
+
+div.calendartableview tr td.topic a {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden; }
+
+div.calendartableview col.today {
+  border: 1px solid #16226a; }
+
+div.calendartableview th, div.calendartableview td {
+  color: #16226a; }
+
+/**
+ -------------------------------------------------
+ Calendar Inline View 
+ --------------------------------------------------
+ **/
+div.marttiphpbb-calendarinlineview {
+  position: relative;
+  width: 100%; }
+
+div.marttiphpbb-calendarinlineview div.weekdays {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%; }
+
+div.marttiphpbb-calendarinlineview div.day {
+  flex: 1;
+  margin: 0.15em;
+  border-radius: 0.6em;
+  background: #e5e7f3;
+  color: #394379;
+  display: flex; }
+
+div.marttiphpbb-calendarinlineview div.day div.day-info {
+  padding: 0.4em 0.8em; }
+
+div.marttiphpbb-calendarinlineview div.day div.day-info-bottom {
+  align-self: flex-end; }
+
+div.marttiphpbb-calendarinlineview div.day div.day-info.small {
+  padding: 0.2em 0.8em; }
+
+div.marttiphpbb-calendarinlineview div.day-info div.monthday {
+  float: left; }
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.monthday {
+  font-size: 1.1em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.monthday {
+  font-size: 1.3em; }
+
+div.marttiphpbb-calendarinlineview div.day-info div.weekday {
+  float: left;
+  padding: 0.1em 0.2em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.weekday {
+  font-size: 0.8em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.weekday {
+  font-size: 1em; }
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon {
+  float: right;
+  padding: 0.1em 0.2em;
+  margin: -0.5em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.moon {
+  font-size: 0.8em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.moon {
+  font-size: 1.1em; }
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon span {
+  z-index: 1; }
+
+div.marttiphpbb-calendarinlineview div.day-info div.isoweek {
+  font-style: italic;
+  float: right;
+  clear: right;
+  padding: 0.1em 0.2em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.isoweek {
+  font-size: 0.7em; }
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.isoweek {
+  font-size: 0.9em; }
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+  div.marttiphpbb-calendarinlineview div.moon > span, div.marttiphpbb-calendarinlineview div.isoweek, div.marttiphpbb-calendarinlineview div.weekday {
+    display: none; } }
+
+div.marttiphpbb-calendarinlineview div.day.even-month {
+  background: white; }
+
+div.marttiphpbb-calendarinlineview div.day.sat, div.marttiphpbb-calendarinlineview div.day.sun {
+  background: #d4d7eb; }
+
+div.marttiphpbb-calendarinlineview div.day.even-month.sat, div.marttiphpbb-calendarinlineview div.day.even-month.sun {
+  background-color: #f9f9f9; }
+
+div.marttiphpbb-calendarinlineview div.eventrows {
+  display: flex;
+  flex-direction: column;
+  margin: 0.3em 0; }
+
+div.marttiphpbb-calendarinlineview div.evrow-info-large {
+  height: 2.2em; }
+
+div.marttiphpbb-calendarinlineview div.evrow-info-small {
+  height: 1.9em; }
+
+div.marttiphpbb-calendarinlineview div.evrow-fill {
+  height: 0.7em; }
+
+div.marttiphpbb-calendarinlineview div.evrow {
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1;
+  height: 2.3em; }
+
+div.marttiphpbb-calendarinlineview div.f-con {
+  min-width: 0; }
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev {
+  margin: 0.15em;
+  background: #dfdfec;
+  border: 1px solid #434270;
+  border-left-style: dashed;
+  border-right-style: dashed;
+  min-width: 0; }
+
+div.marttiphpbb-calendarinlineview div.evrow:nth-child(even) div.f-con div.ev {
+  background: #efeff6; }
+
+div.marttiphpbb-calendarinlineview div.ev.ev-start div.ev-overlay {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em; }
+
+div.marttiphpbb-calendarinlineview div.ev.ev-end div.ev-overlay {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em; }
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay {
+  width: 100%;
+  height: 100%; }
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay:hover, div.marttiphpbb-calendarinlineview div.ev div.ev-overlay.hover {
+  background: rgba(255, 255, 255, 0.5); }
+
+div.marttiphpbb-calendarinlineview div.ev a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-left: 0.3em;
+  min-width: 0; }
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-start {
+  border-top-left-radius: 0.5em;
+  border-bottom-left-radius: 0.5em;
+  border-left-style: solid; }
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-end {
+  border-top-right-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
+  border-right-style: solid; }
+
+div.marttiphpbb-calendarinlineview div.flex-1 {
+  flex: 1; }
+
+div.marttiphpbb-calendarinlineview div.flex-2 {
+  flex: 2; }
+
+div.marttiphpbb-calendarinlineview div.flex-3 {
+  flex: 3; }
+
+div.marttiphpbb-calendarinlineview div.flex-4 {
+  flex: 4; }
+
+div.marttiphpbb-calendarinlineview div.flex-5 {
+  flex: 5; }
+
+div.marttiphpbb-calendarinlineview div.flex-6 {
+  flex: 6; }
+
+div.marttiphpbb-calendarinlineview div.flex-7 {
+  flex: 7; }
+
+div.marttiphpbb-calendarinlineview div.flex-8 {
+  flex: 8; }
+
+div.marttiphpbb-calendarinlineview div.flex-9 {
+  flex: 9; }
+
+div.marttiphpbb-calendarinlineview div.flex-10 {
+  flex: 10; }
+
+div.marttiphpbb-calendarinlineview div.flex-11 {
+  flex: 11; }
+
+div.marttiphpbb-calendarinlineview div.flex-12 {
+  flex: 12; }
+
+div.marttiphpbb-calendarinlineview div.flex-13 {
+  flex: 13; }
+
+div.marttiphpbb-calendarinlineview div.flex-14 {
+  flex: 14; }
+
+div.marttiphpbb-calendarinlineview div.flex-15 {
+  flex: 15; }
+
+div.marttiphpbb-calendarinlineview div.flex-16 {
+  flex: 16; }
+
+div.marttiphpbb-calendarinlineview div.monthrow {
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1;
+  height: 1.8em;
+  margin: 0.3em 0; }
+
+div.marttiphpbb-calendarinlineview div.month {
+  height: 100%;
+  line-height: 1.8em;
+  text-align: center;
+  border-radius: 0.6em;
+  background: #e5e7f3;
+  /* color: #444; */
+  margin: 0 0.15em; }
+
+div.marttiphpbb-calendarinlineview div.month.even-month {
+  /* color: rgb(12, 56, 133); */
+  background: white; }
+
+div.marttiphpbb-calendarinlineview div.month span {
+  display: inline-block;
+  vertical-align: middle; }
+
+/**
+ ---------------------------------------------------------
+ Calendar Month View
+ ---------------------------------------------------------
+ **/
+/*
+ $calendar-primary: desaturate($primary, 50%);
+ $calendar-secondary: desaturate($secondary, 65%);
+ $calendar-odd: lighten($calendar-primary, 55%);
+ $calendar-even: lighten($calendar-primary, 65%);
+ $calendar-odd-light: lighten($calendar-odd, 2.5%);
+ $calendar-odd-dark: darken($calendar-odd, 2.5%);
+ $calendar-even-light: lighten($calendar-even, 2.5%);
+ $calendar-even-dark: darken($calendar-even, 2.5%);
+ $calendar-topic-odd: lighten($calendar-secondary, 68%);
+ $calendar-topic-even: lighten($calendar-secondary, 72%);
+ $calendar-hilit: $primary-on;
+ */
+div.month {
+  color: #394379;
+  width: 100%; }
+
+div.month div.week-container {
+  position: relative;
+  width: 100%; }
+
+div.month div.weekdays {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+
+div.month div.weekdays div.day {
+  flex: 1;
+  background: white;
+  margin: 0.15em;
+  border-radius: 0.5em; }
+
+div.month div.weekdays div.day.this-month {
+  background: #e5e7f3; }
+
+div.month div.weekdays div.day.today.this-month {
+  border: 2px solid #394379; }
+
+div.month div.weekdays div.day div.dayhead {
+  color: #394379;
+  padding: 0.4em 0.8em; }
+
+div.month div.weekdays div.day div.dayhead div.monthday {
+  font-size: 1.8em;
+  float: left; }
+
+div.month div.weekdays div.day div.dayhead div.weekday {
+  font-size: 1.2em;
+  float: left;
+  padding: 0.1em 0.2em; }
+
+div.month div.weekdays div.day div.dayhead div.moon {
+  font-size: 1.2em;
+  float: right;
+  padding: 0.1em 0.2em;
+  margin: -0.5em; }
+
+div.month div.weekdays div.day div.dayhead div.moon span {
+  z-index: 1; }
+
+div.month div.weekdays div.day div.dayhead div.isoweek {
+  font-style: italic;
+  font-size: 0.9em;
+  float: right;
+  clear: right;
+  padding: 0.1em 0.2em; }
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px) {
+  div.moon > span, div.isoweek, div.weekdays div.day div.weekday {
+    display: none; } }
+
+div.month div.weekdays div.day {
+  color: white; }
+
+div.month div.weekdays div.day.sat, div.month div.weekdays div.day.sun {
+  background-color: #f9f9f9; }
+
+div.month div.weekdays div.day.this-month.sat, div.month div.weekdays div.day.this-month.sun {
+  background-color: #d4d7eb; }
+
+div.month div.eventrows {
+  display: flex;
+  flex-direction: column; }
+
+div.month div.eventrows div.evrow-head {
+  height: 2.5em; }
+
+div.month div.eventrows div.evrow-foot {
+  height: 0.7em; }
+
+div.month div.eventrows div.evrow {
+  height: 2em;
+  padding: 0.15em 0;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1; }
+
+div.month div.eventrows div.evrow div.f-con {
+  min-width: 0; }
+
+div.month div.eventrows div.evrow div.f-con div.ev {
+  margin: 0.15em;
+  background: #dfdfec;
+  border: 1px solid #434270;
+  border-left-style: dashed;
+  border-right-style: dashed;
+  min-width: 0; }
+
+div.month div.eventrows div.evrow:nth-child(even) div.f-con div.ev {
+  background: #efeff6; }
+
+div.month div.eventrows div.evrow div.ev.ev-start div.ev-overlay {
+  border-top-left-radius: 0.7em;
+  border-bottom-left-radius: 0.7em; }
+
+div.month div.eventrows div.evrow div.ev.ev-end div.ev-overlay {
+  border-top-right-radius: 0.7em;
+  border-bottom-right-radius: 0.7em; }
+
+div.month div.eventrows div.evrow div.ev div.ev-overlay {
+  width: 100%;
+  height: 100%; }
+
+div.month div.eventrows div.evrow div.ev div.ev-overlay:hover, div.month div.eventrows div.evrow div.ev div.ev-overlay.hover {
+  background: rgba(255, 255, 255, 0.9); }
+
+div.month div.eventrows div.evrow div.ev a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5em;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  padding-left: 0.3em;
+  min-width: 0; }
+
+div.month div.eventrows div.evrow div.f-con div.ev.ev-start {
+  border-top-left-radius: 0.7em;
+  border-bottom-left-radius: 0.7em;
+  border-left-style: solid; }
+
+div.month div.eventrows div.evrow div.f-con div.ev.ev-end {
+  border-top-right-radius: 0.7em;
+  border-bottom-right-radius: 0.7em;
+  border-right-style: solid; }
+
+div.month div.eventrows div.evrow div.f-con div.ev.topic-hilit {
+  border-width: 2px;
+  border-color: #394379; }
+
+div.month div.eventrows div.evrow div.flex-1 {
+  flex: 1; }
+
+div.month div.eventrows div.evrow div.flex-2 {
+  flex: 2; }
+
+div.month div.eventrows div.evrow div.flex-3 {
+  flex: 3; }
+
+div.month div.eventrows div.evrow div.flex-4 {
+  flex: 4; }
+
+div.month div.eventrows div.evrow div.flex-5 {
+  flex: 5; }
+
+div.month div.eventrows div.evrow div.flex-6 {
+  flex: 6; }
+
+div.month div.eventrows div.evrow div.flex-7 {
+  flex: 7; }
