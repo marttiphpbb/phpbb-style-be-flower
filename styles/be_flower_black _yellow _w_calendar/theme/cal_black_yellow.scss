@@ -1,0 +1,2184 @@
+@import '../../../styles/prosilver/theme/normalize.css';
+@import '../../../styles/prosilver/theme/base.css';
+@import '../../../styles/prosilver/theme/utilities.css';
+@import '../../../styles/prosilver/theme/common.css';
+@import '../../../styles/prosilver/theme/links.css';
+@import '../../../styles/prosilver/theme/content.css';
+@import '../../../styles/prosilver/theme/buttons.css';
+@import '../../../styles/prosilver/theme/cp.css';
+@import '../../../styles/prosilver/theme/forms.css';
+@import '../../../styles/prosilver/theme/icons.css';
+@import '../../../styles/prosilver/theme/responsive.css';
+
+@font-face {
+  font-family: be-flower;
+  src: url('font/be-flower.eot');
+  src: url('font/be-flower.eot') format('embedded-opentype'),
+       url('font/be-flower.woff2') format('woff2'),
+       url('font/be-flower.woff') format('woff'),
+       url('font/be-flower.ttf') format('truetype'),
+       url('font/be-flower.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// do not change
+$white: #ffffff;
+$shadow: rgba(0, 0, 0, 0.25);
+
+//== BEGIN EDITING HERE ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// The primary UI Color and an accent version, This is usually the color of your
+// links
+$primary: hsl(0,0%, 0%) !default;
+$primary-on: $white !default;
+
+// The secondary UI Color and an accent version, This is usually the color of
+// your UI elements like buttons/toggles/checks/etc
+$secondary: hsl(0, 0%, 8%) !default;
+$secondary-on: $white !default;
+$secondary-alt: hsl(0,0%,10%) !default;
+
+// The surfahsl(105,67%,1%) accent version, This is the primary color of any
+// components background that is within a container with another background
+$surface: hsl(56,43%,77%) !default;
+$surface-on: hsl(240,1%,26%) !default;
+$surface-alt: hsl(53,51%,84%) !default;
+$surface-alt-on: hsl(219, 20%, 20%) !default;
+
+// These are the default background colors used for containers, or to simulate
+// the abssecence of a background in a section of a surface
+$background-light: rgb(241,241,241) !default;
+$background: hsl(0, 0%, 98%) !default;
+$background-dark: hsl(0, 0%, 83%) !default;
+$background-on: hsl(219, 20%, 20%) !default;
+
+
+// NONE UI COLORS - These colors are not part of the Color Scheme. They are
+// single use only and can be edited
+
+// This is the color for errors
+$error: hsl(1, 75%, 55%) !default;
+$error-on: $white !default;
+$error-light-on: hsl(219, 20%, 20%) !default;
+
+// This is the color for success
+$success: hsl(125, 40%, 55%) !default;
+$success-on: $white !default;
+$success-light-on: hsl(219, 20%, 20%) !default;
+
+// This is the highlight color
+$highlight: hsl(55, 100%, 90%) !default;
+$highlight-on: $white !default;
+$highlight-light-on: hsl(219, 20%, 20%) !default;
+
+// This is the warning color
+$warning: hsl(35, 100%, 55%) !default;
+$warning-on: $white !default;
+$warning-light-on: hsl(219, 20%, 20%) !default;
+
+// This is the default info color
+$info: hsl(200, 15%, 55%) !default;
+$info-on: $white !default;
+$info-light-on: hsl(219, 20%, 20%) !default;
+
+//== The following section of vars are based on the first. Its generating the
+//== dark and light variations of each do not edit them unless you are 
+//== extremely familiar with the tool, scss, and working with color
+
+// PRIMARY COLORS
+
+$primary-light: lighten($primary, 10%) !default;
+$primary-dark: darken($primary, 10%) !default;
+
+// SECONDARY COLORS
+
+$secondary-light: lighten($secondary, 40%) !default;
+$secondary-dark: darken($secondary, 20%) !default;
+
+$secondary-alt-light: lighten($secondary-alt, 89%) !default;
+$secondary-alt-dark: darken($secondary-alt, 36%) !default;
+
+// SURFACE COLORS
+
+$surface-dark: darken($surface, 5%) !default;
+$surface-light: lighten($surface, 5%) !default;
+
+$surface-alt-dark: darken($surface-alt, 5%) !default;
+$surface-alt-light: lighten($surface-alt, 5%) !default;
+
+// ERROR COLORS
+
+$error-dark: darken($error, 16%) !default;
+$error-light: lighten($error, 40%) !default;
+
+// SUCCESS COLORS
+
+$success-dark: darken($success, 16%) !default;
+$success-light: lighten($success, 40%) !default;
+
+// HIGHLIGHT COLORS
+
+$highlight-dark: desaturate($highlight, 45%) !default;
+$highlight-light: lighten($highlight, 5%) !default;
+
+// WARNING COLORS
+
+$warning-dark: darken($warning, 16%) !default;
+$warning-light: lighten($warning, 40%) !default;
+
+// INFO COLORS
+
+$info-dark: darken($info, 16%) !default;
+$info-light: lighten($info, 40%) !default;
+
+
+//== The following section is some none UI scheme colors.
+//== These are single use elements. Use the variables created above to set the
+//== colors you want
+
+
+// CODE COLOR
+$code: $success-dark !default;
+
+// PM COLORS
+$pm-reported: $error !default;
+$pm-marked: $warning !default;
+$pm-reply: $info !default;
+$pm-friend: $success !default;
+$pm-foe: $surface-on !default;
+
+// POLL COLOR
+$polls: $error !default;
+
+// POLL COLORS
+$poll-bg1: desaturate(darken($polls, 10%), 10%);
+$poll-bg2: desaturate(darken($polls, 5%), 5%);
+$poll-bg3: $polls;
+$poll-bg4: saturate(lighten($polls, 5%), 5%);
+$poll-bg5: saturate(lighten($polls, 10%), 10%);
+
+$poll-border1: desaturate(darken($poll-bg1, 10%), 5%);
+$poll-border2: desaturate(darken($poll-bg2, 10%), 5%);
+$poll-border3: desaturate(darken($poll-bg2, 5%), 5%);
+$poll-border4: desaturate(darken($poll-bg4, 5%), 5%);
+$poll-border5: desaturate(darken($poll-bg5, 5%), 5%);
+
+/*
+---------------------------------------------------------------
+Calendar colors
+---------------------------------------------------------------
+*/
+
+$calendar-primary: desaturate($primary, 30%);
+$calendar-secondary: desaturate($secondary, 40%);
+$calendar-odd: lighten($calendar-primary, 80%);
+$calendar-even: lighten($calendar-primary, 90%);
+$calendar-odd-light: lighten($calendar-odd, 2.5%);
+$calendar-odd-dark: darken($calendar-odd, 2.5%);
+$calendar-even-light: lighten($calendar-even, 2.5%);
+$calendar-even-dark: darken($calendar-even, 2.5%);
+$calendar-topic-odd: lighten($calendar-secondary, 79%);
+$calendar-topic-even: lighten($calendar-secondary, 85%);
+$calendar-hilit: $primary-on;
+
+/*
+---------------------------------------------------------------------------------
+ Made with Color Scheme Generator 2.0 - Thanks to @Hanakin
+---------------------------------------------------------------------------------
+*/
+
+/*
+################################################################################
+Secondary Components
+################################################################################
+*/
+
+.error {
+	color: $error-dark;
+}
+
+.reported {
+	background-color: $error-light;
+}
+
+li.reported:hover {
+	background-color: darken($error-light, 5%) !important;
+}
+
+div.rules {
+	background-color: $error-light;
+	color: $error-dark;
+}
+
+p.post-notice {
+	background-color: $error-light;
+	background-image: none;
+}
+
+.badge {
+	background-color: $error;
+	color: $error-on;
+}
+
+/*
+----------------------------------------
+Polls
+----------------------------------------
+*/
+
+fieldset.polls dl.voted {
+	color: $surface-on;
+}
+
+fieldset.polls dd div {
+	color: $error-on;
+}
+
+.rtl .pollbar1,
+.rtl .pollbar2,
+.rtl .pollbar3,
+.rtl .pollbar4,
+.rtl .pollbar5 {
+	border-right-color: transparent;
+}
+
+fieldset.polls dl {
+	border-top-color: $surface-light;
+	color: $secondary-alt-dark;
+}
+
+.pollbar1 {
+	background-color: $poll-bg1;
+	border-right-color: $poll-border1;
+	border-bottom-color: $poll-border1;
+}
+
+.rtl .pollbar1 {
+	border-left-color: $poll-border1;
+}
+
+.pollbar2 {
+	background-color: $poll-bg2;
+	border-right-color: $poll-border2;
+	border-bottom-color: $poll-border2;
+}
+
+.rtl .pollbar2 {
+	border-left-color: $poll-border2;
+}
+
+.pollbar3 {
+	background-color: $poll-bg3;
+	border-right-color: $poll-border3;
+	border-bottom-color: $poll-border3;
+}
+
+.rtl .pollbar3 {
+	border-left-color: $poll-border3;
+}
+
+.pollbar4 {
+	background-color: $poll-bg4;
+	border-right-color: $poll-border4;
+	border-bottom-color: $poll-border4;
+}
+
+.rtl .pollbar4 {
+	border-left-color: $poll-border4;
+}
+
+.pollbar5 {
+	background-color: $poll-bg5;
+	border-right-color: $poll-border5;
+	border-bottom-color: $poll-border5;
+}
+
+.rtl .pollbar5 {
+	border-left-color: $poll-border5;
+}
+
+
+
+
+
+/*
+################################################################################
+Components
+################################################################################
+*/
+
+/*
+----------------------------------------
+Links Global
+----------------------------------------
+*/
+a {
+	color: $secondary-dark;
+
+	&:hover {
+		color: $secondary;
+	}
+}
+
+/* post body links */
+.postlink {
+	border-bottom-color: $primary-light;
+	color: $primary-light;
+
+	&:hover,
+	&:visited {
+		background-color: $secondary-light;
+		border-bottom-color: $primary;
+		color: $primary;
+	}
+
+	&:visited {
+		background-color: $surface;
+	}
+}
+
+.signature a, .signature a:hover {
+	background-color: transparent;
+}
+
+/* arrow links  */
+.arrow-left:hover,
+.arrow-right:hover {
+	color: $secondary-dark;
+}
+
+.posthilit {
+	background-color: darken($error-light, 5%);
+	color: $error-dark;
+}
+
+/*
+----------------------------------------
+Buttons - These need cleaned up alot
+----------------------------------------
+*/
+
+.caret {
+	border-color: $secondary-alt;
+}
+
+.contact-icons a {
+	border-color: $secondary-alt;
+}
+
+.button,
+.button-secondary
+a.button1,
+input.button1,
+input.button3,
+a.button2,
+input.button2,
+.button-secondary {
+	background: $secondary-alt-light;
+	border-color: $secondary-alt;
+	color: $secondary-alt;
+
+	.icon {
+		color: $secondary-alt;
+	}
+
+	&:hover,
+	&:focus,
+	&:focus .icon,
+	&:hover .icon {
+		background: $secondary;
+		border-color: $secondary;
+		color: $secondary-on;
+	}
+
+	&:focus .caret,
+	&:hover .caret {
+		border-color: $secondary-on;
+	}
+}
+
+.button-form,
+input.button-form {
+	color: $secondary;
+}
+
+.button-search:hover,
+.button-search-end:hover {
+	border-color: $secondary;
+}
+
+.contact-icons a:hover {
+	background-color: $secondary-alt-light;
+}
+
+/*
+----------------------------------------
+CP Tabs
+----------------------------------------
+*/
+
+.tabs {
+	.tab > a {
+		background: $surface;
+		color: $surface-on;
+
+		&:hover {
+			background: $surface-light;
+			color: $secondary;
+		}
+	}
+
+	.activetab {
+		> a,
+		> a:hover {
+			background: $surface-light;
+			color: $secondary;
+		}
+	}
+}
+
+/*
+----------------------------------------
+Responsive Tabs Hamburger Menu
+----------------------------------------
+*/
+
+.responsive-tab .responsive-tab-link {
+	&:before {
+		border-color: $surface-on;
+	}
+
+	&:hover:before {
+		border-color: $secondary;
+	}
+}
+
+/*
+----------------------------------------
+MCP Mini Tabs
+----------------------------------------
+*/
+
+.minitabs {
+	a {
+		background: $surface;
+		color: $surface-on;
+
+		&:hover {
+			background: $background-light;
+			color: $secondary;
+		}
+	}
+
+	.activetab a {
+		background: $background-light;
+		color: $secondary;
+	}
+}
+
+/*
+----------------------------------------
+Side Navigation
+----------------------------------------
+*/
+
+.navigation {
+	a {
+		background: $surface;
+		color: $surface-on;
+
+		&:hover {
+			background: $background-light;
+			color: $secondary;
+		}
+	}
+
+	.active-subsection a {
+		background: $background-light;
+		color: $secondary;
+	}
+}
+
+/*
+----------------------------------------
+Pagination
+----------------------------------------
+*/
+
+.pagination {
+	li {
+		.ellipsis span {
+			background: transparent;
+			color: $background-on;
+		}
+	}
+
+	li.active span,
+	.dropdown-visible a.dropdown-trigger,
+	.nojs & .dropdown-container:hover a.dropdown-trigger {
+		background: $secondary;
+		border-color: $secondary;
+		color: $secondary-on;
+	}
+}
+
+
+/*
+----------------------------------------
+Menus (dropdown/notification)
+----------------------------------------
+*/
+
+.dropdown {
+	.pointer {
+		border-color: $secondary-alt-light transparent;
+
+		&-inner {
+			border-color: $background-light transparent;
+		}
+	}
+
+	&-extended {
+		.pointer-inner {
+			border-color: $surface-alt transparent;
+		}
+
+		a.mark_read {
+			background-color: $background-light;
+		}
+
+		ul li {
+			border-top-color: $secondary-alt-light;
+
+			&:hover {
+				background-color: $surface-alt-light;
+				color: $surface-on;
+			}
+		}
+
+		.header,
+		.footer {
+			border-color: $secondary-alt-light;
+			color: $surface-on;
+		}
+
+		.footer { /* factor this out of colors */
+			border-top-style: solid;
+			border-top-width: 1px;
+		}
+
+		.header {
+			background-color: $surface-alt;
+		}
+	}
+
+	& &-contents {
+		background: $background-light;
+		border-color: $secondary-alt-light;
+		box-shadow: 1px 3px 5px $shadow;
+	}
+
+	&-up &-contents {
+		box-shadow: 1px 0 5px $shadow;
+	}
+
+	li,
+	li li {
+		border-color: $secondary-alt-light;
+	}
+
+	li.separator {
+		border-color: $secondary-alt;
+	}
+}
+
+.notification_list p.notification-time {
+	color: $surface-on;
+}
+
+li.notification-reported strong,
+li.notification-disapproved strong {
+	color: $error-dark;
+}
+
+
+/*
+----------------------------------------
+Jumpbox
+----------------------------------------
+*/
+
+.jumpbox {
+	.dropdown {
+		li {
+			border-top-color: $background-light;
+		}
+
+		.pointer-inner {
+			border-color: $surface-alt transparent;
+		}
+	}
+
+	&-cat-link {
+		background-color: $primary-dark;
+		border-top-color: $primary-dark;
+		color: $primary-on;
+
+
+		&:hover,
+		&:focus {
+			background-color: $primary;
+			border-top-color: $primary;
+			color: $primary-on;
+		}
+	}
+
+	&-forum-link,
+	&-sub-link {
+		background-color: $surface-alt;
+
+		&:hover {
+			background-color: $surface-alt-light;
+		}
+	}
+}
+
+/*
+################################################################################
+Backgrounds On Background stuff
+################################################################################
+*/
+
+html,
+body {
+	background-color: $background-dark;
+	color: $background-on;
+}
+
+body {
+	font-family: be-flower, Verdana, Helvetica, Arial, sans-serif;
+}
+.wrap {
+	background-color: $background-light;
+	border-color: $secondary-alt-light;
+}
+
+
+/*
+----------------------------------------
+Header Defaults
+----------------------------------------
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $background-on;
+}
+
+h3,
+.content h2,
+.panel h2 {
+	border-bottom-color: $secondary-alt-light;
+}
+
+
+/*
+----------------------------------------
+HR and Lines
+----------------------------------------
+*/
+
+hr {
+	border-color: $background-light;
+	border-top-color: $secondary-alt-light;
+}
+
+ul.navlinks {
+	border-top-color: $background-light;
+}
+
+
+/*
+----------------------------------------
+Forms
+----------------------------------------
+*/
+
+select {
+	background-color: $background;
+	border-color: $secondary-alt;
+	color: $background-on;
+}
+
+label {
+	color: $background-on;
+}
+
+option.disabled-option {
+	color: $secondary-alt-dark;
+}
+
+
+/*
+----------------------------------------
+Definition list layout for forms
+----------------------------------------
+*/
+
+dd label {
+	color: $background-on;
+}
+
+fieldset.fields1 { /* factor this out */
+	background-color: transparent;
+}
+
+/* Hover effects */
+fieldset dl:hover dt label,
+fieldset.fields2 dl:hover dt label { /* factor this out */
+	color: inherit;
+}
+
+
+/*
+----------------------------------------
+Input field styles
+----------------------------------------
+*/
+
+.inputbox {
+	background-color: $background;
+	border-color: $secondary-alt;
+	color: $background-on;
+
+
+	&:-moz-placeholder,
+	&::-webkit-input-placeholder {
+		color: $background-on;
+	}
+
+	&:hover,
+	&:focus {
+		border-color: $primary;
+	}
+
+	&:focus:-moz-placeholder,
+	&:focus::-webkit-input-placeholder { /* factor this out */
+		color: transparent;
+	}
+}
+
+input.disabled {
+	color: $secondary-alt-dark;
+}
+
+
+/*
+----------------------------------------
+Textarea
+----------------------------------------
+*/
+
+.message-box textarea {
+	color: $background-on;
+
+	&.drag-n-drop {
+		outline-color: $secondary-alt-dark;
+	}
+
+	&.drag-n-drop-highlight {
+		outline-color: rgba($primary, 0.5);
+	}
+}
+
+/*
+################################################################################
+Surfaces
+################################################################################
+*/
+
+/*
+----------------------------------------
+Headerbar
+----------------------------------------
+*/
+
+.headerbar {
+	background-color: $primary-dark;
+	color: $primary-on;
+
+	h1,
+	a,
+	a:hover {
+		color: $primary-on;
+	}
+}
+
+
+/*
+----------------------------------------
+Search box
+----------------------------------------
+*/
+
+.search-header {
+	box-shadow: 0 0 10px $primary-dark; /* factor out everything but color? */
+}
+
+
+/*
+----------------------------------------
+Forum/Topic Backgrounds
+----------------------------------------
+*/
+
+.forumbg,
+.forabg {
+	background-color: $primary-dark;
+
+	.header a {
+		color: $primary-on;
+	}
+}
+
+ul.forums {
+	background-color: $surface-alt-light;
+}
+
+li.header dt,
+li.header dd {
+	color: $primary-on;
+}
+
+/* We invert since no BG in CP */
+.panel-container .panel li.header dd,
+.panel-container .panel li.header dt {
+	color: $background-on;
+}
+
+
+/*
+----------------------------------------
+Forum/Topic Rows
+----------------------------------------
+*/
+
+li.row {
+	color: $background-on;
+	border-top-color: $background-light;
+	border-bottom-color: $surface-alt-dark;
+
+	& strong {
+		color: $background-on;
+	}
+
+	dd {
+		border-left-color: $background-light;
+
+		.rtl & {
+			border-right-color: $background-light;
+			border-left-color: transparent;
+		}
+	}
+
+	&:hover {
+		background-color: $highlight-light;
+
+		& dd {
+			border-left-color: $surface-alt;
+
+			.rtl & {
+				border-right-color: $surface-alt;
+				border-left-color: transparent;
+			}
+		}
+	}
+}
+
+/* This needs factored out completely including transparent border in
+   content.css */
+.panel-container .panel li.row {
+	border-top-color: $background-light;
+	border-bottom-color: $surface-alt-dark;
+}
+
+/* we need a top border since there is no forumlist/topiclist header
+   background */
+ul.cplist {
+	border-top-color: $surface-alt-dark;
+}
+
+
+/*
+----------------------------------------
+Navbar
+----------------------------------------
+*/
+
+.navbar {
+	background-color: $surface-light;
+}
+
+
+/*
+----------------------------------------
+Tables
+----------------------------------------
+*/
+
+table.table1 {
+	thead th,
+	th a {
+		color: $primary-on;
+	}
+
+	tbody tr {
+		&:hover,
+		&.hover {
+			background-color: $highlight-light;
+			color: $highlight-on;
+		}
+	}
+
+	td {
+		color: $surface-on;
+	}
+
+	tbody td {
+		border-top-color: $background;
+	}
+}
+
+.panel-container table.table1 thead th {
+	border-bottom-color: $background-on;
+	color: $background-on;
+}
+
+table.zebra-list tr,
+ul.zebra-list li {
+	&:nth-child(odd) td,
+	&:nth-child(odd) {
+		background-color: $surface-alt;
+	}
+
+	&:nth-child(even) td,
+	&:nth-child(even) {
+		background-color: $surface-alt-dark;
+	}
+}
+
+
+/*
+----------------------------------------
+Panels
+----------------------------------------
+*/
+
+.panel {
+	background-color: $surface-light;
+	color: $surface-on;
+
+	&-container & {
+		background-color: $background-light;
+	}
+}
+
+.cp-main .pm {
+	background-color: $background-light;
+}
+
+dl.details {
+	dt {
+		color: $surface-on;
+	}
+
+	dd {
+		color: $secondary-alt-dark;
+	}
+}
+
+/* Friends list */
+.cp-mini {
+	background-color: $background-light;
+}
+
+dl.mini dt {
+	color: $background-on;
+}
+
+
+/*
+----------------------------------------
+PM Styles
+----------------------------------------
+*/
+
+/* PM Message history */
+.current {
+	color: $surface-on !important;
+}
+
+/* PM marking colours */
+.pmlist li.pm_message_reported_colour,
+.pm_message_reported_colour {
+	border-color: $pm-reported;
+}
+
+.pmlist li.pm_marked_colour,
+.pm_marked_colour {
+	border-color: $pm-marked;
+}
+
+.pmlist li.pm_replied_colour,
+.pm_replied_colour {
+	border-color: $pm-reply;
+}
+
+.pmlist li.pm_friend_colour,
+.pm_friend_colour {
+	border-color: $pm-friend;
+}
+
+.pmlist li.pm_foe_colour,
+.pm_foe_colour {
+	border-color: $pm-foe;
+}
+
+/* Avatar gallery */
+.gallery label {
+	background: $background-light;
+	border-color: $secondary-alt;
+
+	&:hover {
+		background-color: $background-dark;
+	}
+}
+
+.bg3 {
+	background-color: $surface-light;
+}
+
+.bg1 {
+	background-color: $surface-alt-light;
+}
+
+.bg2 {
+	background-color: $surface-alt;
+}
+
+.phpbb_alert {
+	background-color: $background-light;
+	border-color: $secondary-alt;
+}
+
+
+/*
+----------------------------------------
+Post Content
+----------------------------------------
+*/
+
+.content {
+	color: $surface-on;
+}
+
+.post:target .content {
+	color: $surface-on;
+}
+
+.post:target h3 a {
+	color: $surface-on;
+}
+
+dl.faq dt {
+	color: $surface-on;
+}
+
+dl.file dd {
+	color: $secondary-alt-dark;
+}
+
+/* Post signature */
+.signature {
+	border-top-color: $secondary-alt-light;
+}
+
+/* Post noticies */
+.notice {
+	border-top-color: $secondary-alt-light;
+}
+
+.postbody {
+	color: $surface-on;
+}
+
+/* Code block */
+.codebox {
+	background-color: $background-light;
+	border-color: $surface-light;
+
+	p {
+		border-bottom-color: $surface-light;
+	}
+
+	code {
+		color: $code;
+	}
+}
+
+/* Quote block */
+blockquote {
+	background-color: $highlight-dark;
+	border-color: rgba(0, 0, 0, 0.025);
+
+	blockquote {
+		background-color: darken($highlight-dark, 5%);
+
+		blockquote {
+			background-color: $highlight-dark;
+		}
+	}
+}
+
+/* Attachbox block */
+.attachbox {
+	background-color: $background-light;
+	border-color: $surface-dark;
+
+	dd {
+		border-top-color: $surface-dark;
+	}
+
+	p {
+		color: $secondary-alt-dark;
+
+		&.stats {
+			color: $secondary-alt-dark;
+		}
+	}
+}
+
+.attach-image img {
+	border-color: $secondary-alt;
+}
+
+/* Thumbnail block */
+dl.thumbnail {
+	img {
+		background-color: $background-light;
+		border-color: $surface-dark;
+	}
+
+	dd {
+		color: $secondary-alt-dark;
+	}
+
+	dt a:hover {
+		background-color: $surface-dark;
+
+		img {
+			border-color: $secondary;
+		}
+	}
+}
+
+/* Post Profile */
+.postprofile {
+	border-color: $background-light;
+	color: $secondary-alt-dark;
+}
+
+.pm .postprofile {
+	border-color: $secondary-alt-light;
+}
+
+.postprofile strong {
+	color: $surface-on;
+}
+
+dd.profile-warnings {
+	color: $error-dark;
+}
+
+/*
+################################################################################
+MISC
+################################################################################
+*/
+
+/*
+----------------------------------------
+Footer
+----------------------------------------
+*/
+
+.copyright {
+	color: $background-on;
+}
+
+
+/*
+----------------------------------------
+Icons
+----------------------------------------
+*/
+
+.icon,
+a:hover .icon {
+	&.icon-blue {
+		color: $secondary;
+	}
+
+	&.icon-green {
+		color: $success;
+	}
+
+	&.icon-red {
+		color: $error;
+	}
+
+	&.icon-orange {
+		color: $warning;
+	}
+
+	&.icon-gray {
+		color: $secondary-alt-dark;
+	}
+
+	&.icon-lightgray {
+		color: $secondary-alt;
+	}
+
+	&.icon-black {
+		color: $surface-on;
+	}
+}
+
+/* back to top of page */
+.top i {
+	color: $secondary-alt;
+}
+
+.alert_close .icon:before {
+	background-color: $background-light;
+}
+
+
+/*
+----------------------------------------
+Modals Stuff
+----------------------------------------
+*/
+
+.darken {
+	background-color: $background-on;
+}
+
+.loading_indicator {
+	background-color: $background-on;
+}
+
+/*
+----------------------------------------
+Icons/Images
+----------------------------------------
+*/
+
+$be_bu_1a: '\e800';$be_bu_1b: '\e801';
+$be_bu_2a: '\e802';$be_bu_2b: '\e803';
+$be_fl_1a: '\e804';$be_fl_1b: '\e805';
+$be_fl_2a: '\e806';$be_fl_2b: '\e807';
+$be_fl_3a: '\e808';$be_fl_3b: '\e809';
+$be_fl_4a: '\e80a';$be_fl_4b: '\e80b';
+$be_fl_5a: '\e80c';$be_fl_5b: '\e80d';
+$be_fl_6a: '\e80e';$be_fl_6b: '\e80f';
+$be_fl_7a: '\e810';$be_fl_7b: '\e811';
+$be_fl_8a: '\e812';$be_fl_8b: '\e813';
+$be_fl_9a: '\e814';$be_fl_9b: '\e815';
+$be_fl_10a: '\e816';$be_fl_10b: '\e817';
+$be_fl_11a: '\e818';$be_fl_11b: '\e819';
+$be_fl_12a: '\e81a';$be_fl_12b: '\e81b';
+$be_link_a: '\e81c';$be_link_b: '\e81d';
+$be_lock_a: '\e81e';$be_lock_b: '\e81f';
+$be_move_a: '\e820';$be_move_b: '\e821';
+
+$be_border: #000000;
+$be_read: #ffffff;
+$be_unread: #CCCCCC;
+
+@mixin be_icon(){
+    position: absolute;
+    top: .1em;
+    left: .6em;
+    font-size: 2.5em;
+}
+
+.loading_indicator { background-image: url("../../../styles/prosilver/theme/images/loading.gif"); }
+
+.site_logo {
+  width: 52px;
+  font-size: 5em;
+
+  &:before{
+    content: $be_fl_2a;
+    position: absolute;
+  }
+
+  &:after{
+    content: $be_fl_2b;
+    position: absolute;
+	color: black;
+  }
+}
+
+.online { background-image: url("../../../styles/prosilver/theme/en/icon_user_online.gif"); }
+.contact-icon { background-image: url("../../../styles/prosilver/theme/images/icons_contact.png"); }
+
+/* Profile & navigation icons */
+.pm-icon							{ background-position: 0 0; }
+.email-icon							{ background-position: -21px 0; }
+.jabber-icon						{ background-position: -80px 0; }
+.phpbb_icq-icon						{ background-position: -61px 0 ; }
+.phpbb_wlm-icon						{ background-position: -182px 0; }
+.phpbb_aol-icon						{ background-position: -244px 0; }
+.phpbb_website-icon					{ background-position: -40px 0; }
+.phpbb_youtube-icon					{ background-position: -98px 0; }
+.phpbb_facebook-icon				{ background-position: -119px 0; }
+.phpbb_googleplus-icon				{ background-position: -140px 0; }
+.phpbb_skype-icon					{ background-position: -161px 0; }
+.phpbb_twitter-icon					{ background-position: -203px 0; }
+.phpbb_yahoo-icon					{ background-position: -224px 0; }
+
+
+.global_read, .global_read_mine, .announce_read, .announce_read_mine,
+.forum_read_subforum, .forum_link, .forum_read,
+.global_read_locked, .global_read_locked_mine, .announce_read_locked, .announce_read_locked_mine,
+.topic_read_locked, .topic_read_locked_mine, .sticky_read_locked, .sticky_read_locked_mine,
+.forum_read_locked,
+.sticky_read, .sticky_read_mine,
+.pm_read,
+.topic_moved, .topic_read, .topic_read_mine, .topic_read_hot, .topic_read_hot_mine {
+  &:before, &:after{
+    @include be_icon();
+  }
+  &:before{
+    color: $be_read;
+  }
+  &:after{
+    color: $be_border;
+  }
+}
+
+.global_unread, .global_unread_mine, .announce_unread, .announce_unread_mine,
+.forum_unread_subforum, .forum_unread,
+.global_unread_locked, .global_unread_locked_mine,
+.announce_unread_locked, .announce_unread_locked_mine,
+.topic_unread_locked, .topic_unread_locked_mine,
+.sticky_unread_locked, .sticky_unread_locked_mine,
+.forum_unread_locked,
+.sticky_unread, .sticky_unread_mine,
+.pm_unread,
+.topic_unread, .topic_unread_mine, .topic_unread_hot, .topic_unread_hot_mine {
+  &:before, &:after{
+    @include be_icon();
+  }
+  &:before{
+    color: $be_unread;
+  }
+  &:after{
+    color: $be_border;
+  }
+}
+
+.global_read, .global_read_mine, .global_unread, .global_unread_mine {
+  &:before{
+    content: $be_fl_9a;
+  }
+  &:after{
+    content: $be_fl_9b;
+  }
+}
+
+.announce_read, .announce_read_mine, .announce_unread, .announce_unread_mine {
+  &:before{
+    content: $be_fl_11a;
+  }
+  &:after{
+    content: $be_fl_11b;
+  }
+}
+
+.forum_read_subforum, .forum_unread_subforum {
+  &:before{
+    content: $be_fl_12a;
+  }
+  &:after{
+    content: $be_fl_12b;
+  }
+}
+
+.forum_link {
+  &:before{
+    content: $be_link_a;
+  }
+  &:after{
+    content: $be_link_b;
+  }
+}
+
+.forum_read, .forum_unread {
+  &:before{
+    content: $be_fl_7a;
+  }
+  &:after{
+	content: $be_fl_7b;
+  }
+}
+
+.global_unread_locked, .global_unread_locked_mine, .global_read_locked, .global_read_locked_mine,
+.announce_unread_locked, .announce_unread_locked_mine, .announce_read_locked, .announce_read_locked_mine,
+.topic_read_locked, .topic_read_locked_mine, .topic_unread_locked, .topic_unread_locked_mine,
+.sticky_read_locked, .sticky_read_locked_mine, .sticky_unread_locked, .sticky_unread_locked_mine,
+.forum_read_locked, .forum_unread_locked {
+  &:before{
+    content: $be_lock_a;
+  }
+  &:after{
+    content: $be_lock_b;
+  }
+}
+
+.sticky_read, .sticky_read_mine, .sticky_unread, .sticky_unread_mine {
+  &:before {
+	content: $be_fl_4a;
+  }
+  &:after{
+	content: $be_fl_4b;
+  }
+}
+
+.pm_read, .pm_unread {
+  &:before{
+	content: $be_bu_2a;
+  }
+  &:after{
+	content: $be_bu_2b;
+  }
+}
+
+.topic_read, .topic_read_mine, .topic_read_hot, .topic_read_hot_mine,
+.topic_unread, .topic_unread_mine, .topic_unread_hot, .topic_unread_hot_mine {
+  &:before{
+    content: $be_fl_5a;
+  }
+  &:after{
+	content: $be_fl_5b;
+  }
+}
+
+.topic_moved {
+  &:before{
+    content: $be_move_a;
+  }
+  &:after{
+    content: $be_move_b;
+  }
+}
+
+/** 
+---------------------------------------------------------------
+Calendar table viee 
+---------------------------------------------------------------
+**/
+
+div.calendartableview {
+	width: 100%;
+}
+div.calendartableview div.calendar-navigation{
+	position: relative;
+}
+div.calendartableview div.calendar-navigation table {
+	width: 100%;
+	border-collapse: separate;
+	text-align: center;
+	font-weight: bold;
+	table-layout: fixed;
+	cursor: pointer;
+}
+div.calendartableview div.calendar-navigation table.calendar-navigation-overlay{
+	position: absolute;
+}
+table.calendar-navigation-overlay td {
+	border: 1px solid transparent;
+	width: 100%;
+	height: 100%;
+}
+table.calendar-navigation-overlay td a {
+	width: 100%;
+	height: 100%;
+}
+table.calendar-navigation-overlay td.select {
+	background-color: rgba($primary, .1);
+	border-top-color: $primary-dark;
+	border-bottom-color: $primary-dark;
+}
+table.calendar-navigation-overlay td.select-left {
+	border-left-color: $primary-dark;
+}
+table.calendar-navigation-overlay td.select-right {
+	border-right-color: $primary-dark;
+}
+div.calendartableview div.tables table {
+	width: 100%;
+	table-layout: fixed;
+	border: 1px dotted rgba($primary-light, .5);
+	text-align: center;
+}
+
+div.calendartableview table colgroup.month-even,
+div.calendartableview table tr.month .month-even {
+	background: $calendar-even-light;
+}
+
+div.calendartableview table colgroup.month-even col.sat,
+div.calendartableview table colgroup.month-even col.sun {
+	background: $calendar-even-dark;
+}
+
+div.calendartableview table colgroup.month-odd,
+div.calendartableview table tr.month .month-odd {
+	background: $calendar-odd-light;
+}
+
+div.calendartableview table colgroup.month-odd col.sat,
+div.calendartableview table colgroup.month-odd col.sun {
+	background: $calendar-odd-dark;
+}
+
+.isoweek span{
+	border: 2px solid $primary-dark;
+	font-size: .7em;
+	background-color: $primary-dark;
+	color: $primary-on;
+}
+div.calendartableview td,
+div.calendartableview th {
+	height: 1.7em;
+}
+div.calendartableview td.topic {
+	background-color: $calendar-topic-even;
+	border: 1px solid $primary-light;
+}
+div.calendartableview tr:nth-child(odd) td.topic {
+	background-color: $calendar-topic-odd;
+}
+div.calendartableview tr td.topic.hover {
+	background-color: $calendar-hilit;
+}
+div.calendartableview tr td.topic-hilit {
+	border: 2px solid $primary-dark;
+}
+div.calendartableview tr td a {
+	width: 100%;
+}
+div.calendartableview tr td.topic a {
+  font-weight: bold;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+div.calendartableview col.today {
+	border: 1px solid $primary-dark;
+}
+div.calendartableview th,
+div.calendartableview td {
+	color: $primary-dark;
+}
+
+/**
+-------------------------------------------------
+Calendar Inline View 
+--------------------------------------------------
+**/
+
+div.marttiphpbb-calendarinlineview
+{
+	position: relative;
+	width: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.weekdays
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display:flex;
+	width: 100%;
+	height: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.day
+{
+	flex: 1;
+	margin: .15em;
+	border-radius: .6em;
+	background: $calendar-odd-light;
+	color: $calendar-primary;
+	display: flex;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info
+{
+	padding: .4em .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info-bottom
+{
+	align-self: flex-end;
+}
+
+div.marttiphpbb-calendarinlineview div.day div.day-info.small
+{
+	padding: .2em .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.monthday
+{
+	float: left;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.monthday
+{
+	font-size: 1.1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.monthday
+{
+	font-size: 1.3em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.weekday
+{
+	float: left;
+	padding: .1em .2em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.weekday
+{
+	font-size: .8em;
+}
+div.marttiphpbb-calendarinlineview div.day-info-large div.weekday
+{
+	font-size: 1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon
+{
+	float: right;
+	padding: .1em .2em;
+	margin: -.5em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.moon
+{
+	font-size: .8em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.moon
+{
+	font-size: 1.1em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.moon span
+{
+	z-index: 1;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info div.isoweek
+{
+	font-style: italic;
+	float: right;
+	clear: right;
+	padding: .1em .2em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-small div.isoweek
+{
+	font-size: 0.7em;
+}
+
+div.marttiphpbb-calendarinlineview div.day-info-large div.isoweek
+{
+	font-size: .9em;
+}
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px)
+{
+	div.marttiphpbb-calendarinlineview div.moon > span,
+	div.marttiphpbb-calendarinlineview div.isoweek,
+	div.marttiphpbb-calendarinlineview div.weekday
+	{
+		display: none;
+	}
+}
+
+div.marttiphpbb-calendarinlineview div.day.even-month
+{
+	background: $calendar-even-light;
+}
+
+div.marttiphpbb-calendarinlineview div.day.sat,
+div.marttiphpbb-calendarinlineview div.day.sun
+{
+	background: $calendar-odd-dark;
+}
+div.marttiphpbb-calendarinlineview div.day.even-month.sat,
+div.marttiphpbb-calendarinlineview div.day.even-month.sun
+{
+	background-color: $calendar-even-dark;
+}
+
+div.marttiphpbb-calendarinlineview div.eventrows
+{
+	display: flex;
+	flex-direction: column;
+	margin: .3em 0;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-info-large
+{
+	height: 2.2em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-info-small
+{
+	height: 1.9em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow-fill
+{
+	height: .7em;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow
+{
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+	height: 2.3em;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con
+{
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev
+{
+	margin: .15em;
+	background: $calendar-topic-odd;
+	border: 1px solid $calendar-secondary;
+	border-left-style: dashed;
+	border-right-style: dashed;
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.evrow:nth-child(even) div.f-con div.ev
+{
+	background: $calendar-topic-even;
+}
+
+div.marttiphpbb-calendarinlineview div.ev.ev-start div.ev-overlay
+{
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+}
+
+div.marttiphpbb-calendarinlineview div.ev.ev-end div.ev-overlay
+{
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+}
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay
+{
+	width: 100%;
+	height: 100%;
+}
+
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay:hover,
+div.marttiphpbb-calendarinlineview div.ev div.ev-overlay.hover
+{
+	background: rgba($primary-on, 0.5);
+}
+
+div.marttiphpbb-calendarinlineview div.ev a
+{
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	padding-left: .3em;
+	min-width: 0;
+}
+
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-start
+{
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+	border-left-style: solid;
+}
+div.marttiphpbb-calendarinlineview div.f-con div.ev.ev-end
+{
+	border-top-right-radius: .5em;
+	border-bottom-right-radius: .5em;
+	border-right-style: solid;
+}
+
+div.marttiphpbb-calendarinlineview div.flex-1
+{
+	flex: 1;
+}
+div.marttiphpbb-calendarinlineview div.flex-2
+{
+	flex: 2;
+}
+div.marttiphpbb-calendarinlineview div.flex-3
+{
+	flex: 3;
+}
+div.marttiphpbb-calendarinlineview div.flex-4
+{
+	flex: 4;
+}
+div.marttiphpbb-calendarinlineview div.flex-5
+{
+	flex: 5;
+}
+div.marttiphpbb-calendarinlineview div.flex-6
+{
+	flex: 6;
+}
+div.marttiphpbb-calendarinlineview div.flex-7
+{
+	flex: 7;
+}
+div.marttiphpbb-calendarinlineview div.flex-8
+{
+	flex: 8;
+}
+div.marttiphpbb-calendarinlineview div.flex-9
+{
+	flex: 9;
+}
+div.marttiphpbb-calendarinlineview div.flex-10
+{
+	flex: 10;
+}
+div.marttiphpbb-calendarinlineview div.flex-11
+{
+	flex: 11;
+}
+div.marttiphpbb-calendarinlineview div.flex-12
+{
+	flex: 12;
+}
+div.marttiphpbb-calendarinlineview div.flex-13
+{
+	flex: 13;
+}
+div.marttiphpbb-calendarinlineview div.flex-14
+{
+	flex: 14;
+}
+div.marttiphpbb-calendarinlineview div.flex-15
+{
+	flex: 15;
+}
+div.marttiphpbb-calendarinlineview div.flex-16
+{
+	flex: 16;
+}
+div.marttiphpbb-calendarinlineview div.monthrow
+{
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+	height: 1.8em;
+	margin: .3em 0;
+}
+div.marttiphpbb-calendarinlineview div.month
+{
+	height: 100%;
+	line-height: 1.8em;
+	text-align: center;
+	border-radius: .6em;
+	background: $calendar-odd-light;
+	/* color: #444; */
+	margin: 0 .15em;
+}
+div.marttiphpbb-calendarinlineview div.month.even-month
+{
+	/* color: rgb(12, 56, 133); */
+	background: $calendar-even-light;
+}
+div.marttiphpbb-calendarinlineview div.month span
+{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/**
+---------------------------------------------------------
+Calendar Month View
+---------------------------------------------------------
+**/
+
+/*
+$calendar-primary: desaturate($primary, 50%);
+$calendar-secondary: desaturate($secondary, 65%);
+$calendar-odd: lighten($calendar-primary, 55%);
+$calendar-even: lighten($calendar-primary, 65%);
+$calendar-odd-light: lighten($calendar-odd, 2.5%);
+$calendar-odd-dark: darken($calendar-odd, 2.5%);
+$calendar-even-light: lighten($calendar-even, 2.5%);
+$calendar-even-dark: darken($calendar-even, 2.5%);
+$calendar-topic-odd: lighten($calendar-secondary, 68%);
+$calendar-topic-even: lighten($calendar-secondary, 72%);
+$calendar-hilit: $primary-on;
+*/
+
+div.month
+{
+  color: $calendar-primary;
+  width: 100%;
+}
+
+div.month div.week-container
+{
+	position: relative;
+	width: 100%;
+}
+
+div.month div.weekdays
+{
+	position:absolute;
+	display:flex;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+div.month div.weekdays div.day
+{
+	flex: 1;
+	background: $calendar-even-light;
+	margin: .15em;
+	border-radius: .5em;
+}
+
+div.month div.weekdays div.day.this-month
+{
+	background: $calendar-odd-light;
+}
+
+div.month div.weekdays div.day.today.this-month
+{
+	border: 2px solid $calendar-primary;
+}
+
+div.month div.weekdays div.day div.dayhead
+{
+  color: $calendar-primary;
+  padding: .4em .8em;
+}
+
+div.month div.weekdays div.day div.dayhead div.monthday
+{
+	font-size: 1.8em;
+	float: left;
+}
+
+div.month div.weekdays div.day div.dayhead div.weekday
+{
+	font-size: 1.2em;
+	float: left;
+	padding: .1em .2em;
+}
+
+div.month div.weekdays div.day div.dayhead div.moon
+{
+	font-size: 1.2em;
+	float: right;
+	padding: .1em .2em;
+	margin: -.5em;
+}
+
+div.month div.weekdays div.day div.dayhead div.moon span
+{
+	z-index: 1;
+}
+
+div.month div.weekdays div.day div.dayhead div.isoweek
+{
+	font-style: italic;
+	font-size: 0.9em;
+	float: right;
+	clear: right;
+	padding: .1em .2em;
+}
+
+@media only screen and (max-width: 500px), only screen and (max-device-width: 500px)
+{
+	div.moon > span, div.isoweek, div.weekdays div.day div.weekday
+	{
+		display: none;
+	}
+}
+
+div.month div.weekdays div.day
+{
+	color: $calendar-even-light;
+}
+
+div.month div.weekdays div.day.sat,
+div.month div.weekdays div.day.sun
+{
+	background-color: $calendar-even-dark;
+}
+div.month div.weekdays div.day.this-month.sat,
+div.month div.weekdays div.day.this-month.sun
+{
+	background-color: $calendar-odd-dark;
+}
+
+div.month div.eventrows
+{
+	display:flex;
+	flex-direction: column;
+}
+
+div.month div.eventrows div.evrow-head
+{
+	height: 2.5em;
+}
+div.month div.eventrows div.evrow-foot
+{
+	height: .7em;
+}
+div.month div.eventrows div.evrow
+{
+	height: 2em;
+	padding: .15em 0;
+	display: flex;
+	justify-content: space-evenly;
+	z-index: 1;
+}
+
+div.month div.eventrows div.evrow div.f-con
+{
+	min-width: 0;
+}
+
+div.month div.eventrows div.evrow div.f-con div.ev
+{
+	margin: .15em;
+	background: $calendar-topic-odd;
+	border: 1px solid $calendar-secondary;
+	border-left-style: dashed;
+	border-right-style: dashed;
+	min-width: 0;
+}
+
+div.month div.eventrows div.evrow:nth-child(even) div.f-con div.ev{
+	background: $calendar-topic-even;
+}
+div.month div.eventrows div.evrow div.ev.ev-start div.ev-overlay{
+	border-top-left-radius: .7em;
+	border-bottom-left-radius: .7em;
+}
+div.month div.eventrows div.evrow div.ev.ev-end div.ev-overlay{
+	border-top-right-radius: .7em;
+	border-bottom-right-radius: .7em;
+}
+div.month div.eventrows div.evrow div.ev div.ev-overlay{
+	width: 100%;
+	height: 100%;
+}
+div.month div.eventrows div.evrow div.ev div.ev-overlay:hover,
+div.month div.eventrows div.evrow div.ev div.ev-overlay.hover
+{
+	background: rgba($calendar-hilit, 0.9);
+}
+
+div.month div.eventrows div.evrow div.ev a
+{
+	display:inline-block;
+	width: 100%;
+	height: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+	padding-left: .3em;
+	min-width: 0;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.ev-start
+{
+	border-top-left-radius: .7em;
+	border-bottom-left-radius: .7em;
+	border-left-style: solid;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.ev-end
+{
+	border-top-right-radius: .7em;
+	border-bottom-right-radius: .7em;
+	border-right-style: solid;
+}
+div.month div.eventrows div.evrow div.f-con div.ev.topic-hilit
+{
+	border-width: 2px;
+	border-color: $calendar-primary;
+}
+
+div.month div.eventrows div.evrow div.flex-1
+{
+	flex: 1;
+}
+div.month div.eventrows div.evrow div.flex-2
+{
+	flex: 2;
+}
+div.month div.eventrows div.evrow div.flex-3
+{
+	flex: 3;
+}
+div.month div.eventrows div.evrow div.flex-4
+{
+	flex: 4;
+}
+div.month div.eventrows div.evrow div.flex-5
+{
+	flex: 5;
+}
+div.month div.eventrows div.evrow div.flex-6
+{
+	flex: 6;
+}
+div.month div.eventrows div.evrow div.flex-7
+{
+	flex: 7;
+}
