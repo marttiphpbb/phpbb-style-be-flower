@@ -30,20 +30,20 @@ $shadow: rgba(0, 0, 0, 0.25);
 
 // The primary UI Color and an accent version, This is usually the color of your
 // links
-$primary: hsl(231,66%, 35%) !default;
+$primary: hsl(210,66%, 35%) !default;
 $primary-on: $white !default;
 
 // The secondary UI Color and an accent version, This is usually the color of
 // your UI elements like buttons/toggles/checks/etc
-$secondary: hsl(241, 66%, 35%) !default;
+$secondary: hsl(210, 66%, 35%) !default;
 $secondary-on: $white !default;
 $secondary-alt: hsl(0,0%,10%) !default;
 
 // The surfahsl(105,67%,1%) accent version, This is the primary color of any
 // components background that is within a container with another background
-$surface: hsl(191,100%,92%) !default;
+$surface: hsl(210,2%,80%) !default;
 $surface-on: hsl(240,1%,26%) !default;
-$surface-alt: hsl(0,8%,85%) !default;
+$surface-alt: hsl(210,8%,85%) !default;
 $surface-alt-on: hsl(219, 20%, 20%) !default;
 
 // These are the default background colors used for containers, or to simulate
